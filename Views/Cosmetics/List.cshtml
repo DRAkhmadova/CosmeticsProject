@@ -1,0 +1,27 @@
+﻿@using Сайт.ViewModels
+@model CosmeticsListViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="widht=devaice-widht" />
+    <title>List</title>
+</head>
+<body>
+    <h1>Вся косметика</h1>
+    <h3>@Model.cosmSection </h3>
+    @{ 
+        foreach(var cosm in Model.allCosmetics)
+        {
+            <div>
+                <h2>Название продукта: @cosm.name </h2>
+                <p>Цена:@cosm.price.ToString("c")</p>
+
+            </div>
+        }
+    }
+</body>
+</html>
